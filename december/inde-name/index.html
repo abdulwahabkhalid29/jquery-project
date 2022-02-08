@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>Jquery Home work</title>
+</head>
+<body>
+    <div class="container">
+        <p class="hidden">My Name is Awahab.</p>
+        <p class="hidden">I am the student of Second Year.</p>
+        <p>Today I am doing jquery home work.</p>
+        <button id="redbtn" class="btn btn-outline-danger">hide Button</button>
+        <button id="greenbtn" class="btn btn-outline-info">show Button</button>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#redbtn").click(function(){
+                $(".hidden").hide();
+            });
+            $("#greenbtn").click(function(){
+                $(".hidden").show();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery animation</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        #div14{
+            padding: 50px;
+            display: none;
+        }
+        #div14,#div12{
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: wheat;
+            color: black;
+            border: groove 3px rgb(110, 255, 212);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body style="background-color: rgba(0, 255, 242, 0.172);">
+    <div class="container ">
+        <div class="row">   
+        <h1 class="text-primary">Jquery Animation :-</h1>
+        <p  style="color: lightgray;">_________________________________________________________________________________________________________________________________________________</p>  
+        <p style="margin-top: -33px; color: lightgray;">_________________________________________________________________________________________________________________________________________________</p>
+        <div class="col-md-12">
+        <button id="btn13" class="mt-4 btn btn-success">Stop Sliding</button>
+        <div class="mt-5" id="div12"> Sliding ku click krne par ye slide kare ga or stop ka button stop kar de ga.</div>
+        <div style="padding: 60px;"id="div14">Hello world!</div>
+        </div>
+        
+        <div class="col-md-12">
+            <p id="p7" class="mt-5">paragraph ku alert kar de ga! </p>
+        <button id="btn61" class="btn btn-success">Show text</button>
+        <button id="btn71" class="btn btn-success">Show HTML</button>
+        </div>
+        <div class="col-md-12">
+        <p>Name: <input type="text" id="test" class="form-control" ></p>
+        <button id="btn81" class="btn btn-success">Show vlaue</button>
+        </div>
+        <div class="col-md-12">
+        <button id="btn1" class="mt-5 btn btn-outline-success " >Animation Left</button>
+        <button id="stop" class="btn btn-success" style="margin-top: 47px;">Stop Animation</button>
+        <p>Animation ke left hote hi stop ka button animation ku stop kar de ga .</p> 
+        <img src="assets/img/WahabBG.jpg" id="div1" style="height: 100px;  width: 100px;  position: absolute; " class="rounded"></img>
+        </div>
+        <div class="col-md-12"> 
+        <button id="btn2" class="btn btn-outline-success" style="margin-top: 250px;" > Animation Opacity</button>
+        <p id="p2">Animation ku left or paragraph ku hide kar ke alert kar de ga .</p>
+        <img src="assets/img/lush-leave-22153424.jpg" id="div2" style="height: 100px; width: 100px;  position: absolute; " class="rounded"></img>
+        </div>
+        <div class="col-md-12"> 
+        <button id="btn3" class="btn btn-outline-success" style="margin-top: 250px;" > Animation += Height & Width</button>
+        <p>Button press krne par margin-left , opacity or height width double hu jy ga.</p>
+        <img src="assets/img/pexels-photo-1032650.jpeg" id="div3" style="height: 100px; width: 100px;  position: absolute; " class="rounded"></img>
+        </div>
+        <div class="col-md-12"> 
+        <button id="btn4" class="btn btn-outline-success" style="margin-top: 250px;" > Animation SlideUp SlideDown</button>
+        <p id="pre">Animation or paragraph ka color change kar ke slideUp slideDown hu jy ga.</p>
+        <img src="assets/img/Screenshot_2021-10-23-10-04-07-26.jpg" id="div4" style="height: 100px; width: 100px;  position: absolute; " class="rounded"></img>
+        </div>
+        <div class="col-md-12"> 
+        <button id="btn5" class="btn btn-outline-success" style="margin-top: 250px; "> All Types Animation</button>
+        <p>Button press karne par height width opacity kam kare gi.</p>
+        <img src="assets/img/2808.jpg" id="div5" style="height: 100px; width: 100px; position: absolute; " class="rounded"></img>
+        </div>
+        <div class="col-md-12"> 
+        <button id="btn6" class="btn btn-outline-success" style="margin-top: 250px;" > Animation With Alphabet</button>
+        <p>Button press kare par margin-left or alphabet ku bara kar de ga.</p>
+        <div id="div6" style="height: 100px; width: 150px; background-color: rgba(0, 110, 255, 0.172); position: absolute;" class="rounded">Error</div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn1').click(function(){
+                $('#div1').animate({left : '300px'});
+            });
+            $('#stop').click(function(){
+                $('#div1').stop();
+            });
+            $('#btn2').click(function(){
+                $('#div2').animate({left : '300px', opacity : '0.5'});
+            });
+            $("#btn2").click(function(){
+                $("#p2").hide("slow" , function(){
+                    alert("The paragraph has been hidde");
+                });
+            });
+            $('#btn3').click(function(){
+                $('#div3').animate({left : '300px', height : '+=250px' , width : '+=250px'});
+            });
+            $('#btn4').click(function(){
+                $('#div4').animate().slideUp(2000).slideDown(2000);
+                $('#pre').css('color','red').slideUp(2000).slideDown(2000);
+            });
+            $('#btn5').click(function(){
+                var div = $("#div5");
+                div.animate({height : '300px' , opacity : '0.4'}, "slow");
+                div.animate({width : '300px' , opacity : '0.8'}, "slow");
+                div.animate({height : '100px' , opacity : '0.4'}, "slow");
+                div.animate({width : '100px' , opacity : '0.8'}, "slow");
+            });
+            $('#btn6').click(function(){
+                var div = $("#div6");
+                div.animate({left: '300px'}, 'slow');
+                div.animate({fontSize: '60px'}, 'slow');
+            });
+            $("#div12").click(function(){
+                $("#div14").slideDown(5000);
+            });
+            $("#btn13").click(function(){
+                $("#div14").stop();
+            });
+            $("#btn61").click(function(){
+                alert("text: " + $ ("#p7").text());
+            });
+            $("#btn71").click(function(){
+                alert("HTML: " + $("#p7").html());
+            });
+            $("#btn81").click(function(){
+                alert("Value: " + $("#test").val());
+            });
+        });
+    </script>
+</body>
+</html>

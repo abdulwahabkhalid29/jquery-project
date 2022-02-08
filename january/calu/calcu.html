@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery input</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head> 
+<body style="background-color: rgba(207, 255, 111, 0.138);">
+    <div class="container">
+        <div style="margin-left: 270px; " class="col-md-5 mt-5">
+        <div class="rounded  p-5" style="background-color: rgb(184, 184, 184);">
+            <p id="result" type="text" class="p-4  form-control" style="border: white; font-size: xx-large;">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="value1" style="margin-top: -17px;border: white;">
+                    <input type="text" class="form-control" id="symbol" style="margin-top: -17px;border: white;">
+                    <input type="text" class="form-control" id="value2" style="margin-top: -17px;border: white;">
+                </div>
+                <div class="row" style="margin-left: 10px;">
+                <div class="col-md-4">
+                    <button id="btn5" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;" >1</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn6" class="btn mt-4 p-4 btn-light"   style="border: gray 1px solid; font-size: larger;"value="2">2</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn7" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">3</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn8" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">4</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn9" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">5</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn10" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">6</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn11" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">7</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn12"  class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">8</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn13" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;">9</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn14" class="btn mt-4 p-4 btn-light"  style="border: gray 1px solid; font-size: larger;"value="0">0</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn4" style="background-color: brown; font-size: larger;" class="btn mt-4 p-4 btn-light text-light" value="/" >/</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn3" style="background-color: brown; font-size: larger;" class="btn mt-4 p-4 btn-light text-light" value="*">*</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn2" style="background-color: brown; font-size: larger;" class="btn mt-4 p-4 btn-light text-light" value="-">-</button>
+                </div>
+                <div class="col-md-4">
+                    <button id="btn1" style="background-color: brown; font-size: larger;" class="btn mt-4 p-4 btn-light text-light" value="+">+</button>
+                </div>
+                <div class="col-md-4">
+                    <button  style="font-size: larger;" class="btn mt-4 p-4 btn-light text-light bg-success"  id="clearAll">C</button>
+                </div>
+                <div>
+                    <button style="background-color: blue; color: white;" class="btn btn-block mt-5 p-3 btn-light" id="equalTo">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#equalTo").click(function(){
+                var value1 = $("#value1").val();
+                var value2 = $("#value2").val();
+                var symbol = $("#symbol").val();
+                if(symbol == "*"){
+                    var result = parseInt(value1) * parseInt(value2);
+                    $("#result").html(result);
+                }
+                else if(symbol == "+"){
+                    var result = parseInt(value1) + parseInt(value2);
+                    $("#result").html(result);
+                }
+                else if(symbol == "/"){
+                    var result = parseInt(value1) / parseInt(value2);
+                    $("#result").html(result);
+                }
+                else if(symbol == "-"){
+                    var result = parseInt(value1) - parseInt(value2);
+                    $("#result").html(result);
+                }
+            });
+            $("#clearAll").click(function(){
+                 $("#value1").val("");
+                 $("#value2").val("");
+                 $("#symbol").val("");
+                 $("#result").html("");
+            });
+        });
+    </script>
+</body>
+</html>

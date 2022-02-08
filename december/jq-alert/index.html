@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container-fluid bg-light">
+    <div class="container">
+        <div class="mt-5 card">
+            <div class="card-header bg-info text-danger">
+                <h4>Mouseenter & Mouseleave Methods</h4>
+            </div>
+            <div class="card-body">
+                    <p id="p1"> This is a paragraph</p>
+            </div>
+            <div class="card-footer">
+               <p> jab ap apna cursor paragraph pe ly ke jy ge tu notification show hu ga or ap leave kare ge tu bi notification show hu ga. </p> 
+            </div>
+        </div>
+        <div class="mt-5 card">
+            <div class="card-header bg-info text-danger">
+                <h4>Focus() & Blur() Method</h4>
+            </div>
+            <div class="card-body">
+                    <label for="name">Name</label>
+                    <input type="text">
+                    <label for="name">E-mail</label>
+                    <input type="text">
+            </div>
+            <div class="card-footer">
+                <p>1) Focue: jab ap apna cursor input pe click kare ge tu focus hu jy ga yellow color me.</p>
+                <p>2) Blur: jab ap apna cursor phle wale pe click kare ge tu dusra wala blur hu jy ga green color me.</p>
+            </div>
+        </div>
+        <div class="mt-5 card">
+            <div class="bg-info card-header text-danger">
+                <h3>Leave Cursor on Paragraph</h3>
+            </div>
+            <div class="card-body">
+                <p id="p2">Enter this Paragraph</p>
+            </div>
+            <div class="card-footer">
+                <p>jab ap apna cursor paragraph se leave kare ge tu notification show hu ga.  </p>
+            </div>
+        </div>
+        <div class="mt-5 card">
+            <div class="bg-info card-header text-danger">
+                <h3>Cursor down on Paragraph</h3>
+            </div>
+            <div class="card-body">
+                <p id="p3">Enter this Paragraph</p>
+            </div>
+        </div>
+        <div class="card-footer">
+            <p>jab ap apna cursor heading ke niche le k jye ge or apne mouse ke kisi bhi button ko click kare ge to ye ek notification de ga.</p>
+        </div>
+        </div>
+        <div class="mt-5 card">
+            <div class="text-danger bg-info card-header">
+                <h3>Cursor Up on Paragraph</h3>
+            </div>
+            <div class=" card-body">
+                <p id="p7">Enter this Paragraph 2</p>
+            </div>
+            <div class="card-footer">
+                <p>Agar ap apna cursor paragraph ke uper le jye ge or mouse ke kisi bhi button ko dabye ge to ye ek notification de ga.</p>
+            </div>
+        </div>
+        <div class="mt-5 card">
+            <div class="card-header bg-info text-danger">
+                <h4>Multiple event Methods</h4>
+            </div>
+            <div class="card-body">
+                    <h5>Click or move the mouse pointer over this paragraph.</h5>
+                </div>
+                <div class="card-footer">
+                <p>jab ap apna cursor heading pe le ke jye ge to ye iska color change hu jy ga jab ap apna cursor hataye ge to color pechle wale se change ho jye ga or jab ap apna cursor heading pe le ke jye ge or click kar k rakhe ge to iska color pechle wale se change ho jye ga.</p>
+
+                </div>
+            </div>
+            <div class="mt-5  card">
+                <div class="text-danger bg-info card-header">
+                    <h4>Press Paraghraph To hide them</h4>
+                </div>
+                <div class="card-body">
+                    <p class="pa">if you click on me,i will disappear </p>
+                    <p class="pa">Click me away!</p>
+                    <p class="pa">Click me too</p>
+                </div>
+                <div class="card-footer">
+                    <p >jab ap in paragraph par single click kare ge to ye invisible ho jye ge.</p>
+               </div>
+            </div>
+            <div class="mt-5 card">
+                <div class="bg-info text-danger card-header">
+                    <h3>Press Paraghraph on double time To hide them</h3>
+                </div>
+                <div class="card-body">
+                    <p class="s">if you click on me,i will disappear </p>
+                    <p class="s">Click me away!</p>
+                    <p class="s">Click me too</p>
+                </div>
+                <div class="card-footer">
+                    <p>Agar ap in Paragraph par double click kare ge to ye invisible ho jye ge.</p>
+                </div>
+            </div>
+    </div>
+</div>
+        <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").hover(function(){
+                alert("you entered");
+            },
+            function(){
+                alert("bye the get");
+        });
+        $(".pa").click(function(){
+                $(this).hide();
+            });
+            $("#p7").mouseup(function(){
+                alert("Your cursor is up on p7!")
+            });
+            $(".s").dblclick(function(){
+                $(this).hide();
+            });
+        $("input").focus(function(){
+            $(this).css("background-color","yellow");
+        });
+        $("input").blur(function(){
+            $(this).css("background-color","green");
+        });
+        $("#p2").mouseleave(function(){
+                alert("You Enterd p2!")
+            });
+            $("#p3").mousedown(function(){
+                alert("You Enterd p3!")
+            })
+        $("h5").on({
+            mouseenter: function(){
+                $(this).css("background-color","lightgray");                
+            },
+            mouseleave: function(){
+                $(this).css("background-color","lightblue");                
+            },
+             click: function(){
+                $(this).css("background-color","lightgreen");                
+            },
+        });
+    });
+    </script>
+</body>
+</html>

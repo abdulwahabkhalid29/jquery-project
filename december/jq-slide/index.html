@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery Slide</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body{
+            background: rgba(0, 0, 0, 0.193);
+            margin-top: 100px;
+        }
+        #me,#click{
+            border: rgb(25, 0, 255) 1px solid;
+            padding: 10px;
+            background: rgba(255, 196, 0, 0.391);
+            text-align: center;
+        }
+        #me{
+            padding: 40px;
+            display: none;
+        }
+        #me1,#click1{
+            border: rgb(255, 0, 0) 1px solid;
+            padding: 10px;
+            background: rgba(0, 255, 251, 0.378);
+            text-align: center;
+        }
+        #me1{
+            padding: 40px;
+        }
+        #me2,#click2{
+            border: rgb(0, 255, 64) 1px solid;
+            padding: 10px;
+            background: lightgrey;
+            text-align: center;
+        }
+        #me2{
+            padding: 40px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h3 class="text-center text-primary ">Jquery Slide Down</h3>
+    <div id="click" class="mt-2 shadow-lg">Slide Down</div>
+    <div id="me">Hello world!</div>
+    
+    <h3 class="text-center text-danger mt-5">Jquery Slide Up</h3>
+    <div id="click1">Slide Up</div>
+    <div id="me1">Hello world!</div>
+    
+    <h3 class="text-center text-success mt-5">Jquery Slide Toggle</h3>
+    <div id="click2">Slide Toggle</div>
+    <div id="me2">Hello world!</div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+          $("#click").click(function(){
+            $("#me").slideDown("fast");
+          });
+          $("#click1").click(function(){
+            $("#me1").slideUp("fast");
+          });
+          $("#click2").click(function(){
+            $("#me2").slideToggle("fast");
+          });  
+        });
+    </script>
+</body>
+</html>

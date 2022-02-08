@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimension</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        #div1{
+            height: 200px;
+            width: 400px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid red;
+            background-color: rgb(230, 173, 173);
+        }
+        #div2{
+            height: 200px;
+            width: 400px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid blue;
+            background-color: lightblue;
+        }
+        #div3{ 
+            height: 200px;
+            width: 400px;
+            padding: 10px;
+            margin: 3px;
+            border: 1px solid green;
+            color: green;
+            background-color: rgb(173, 230, 180);
+        }
+    </style>
+</head>
+<body style="background-color: rgba(0, 255, 255, 0.07);">
+    <div class="container">
+        <h1 class="text-warning text-center">Dimensions :- <br>___________________________________________________________</h1>
+        <h2 class="text-danger mt-5">Dimension Height width :</h2>
+        <div id="div1" class="text-danger" style="font-size: larger;"></div><br>
+        <button id="btn1" class="btn btn-outline-danger btn-lg">Dimension of Div</button>
+        <h2 class="text-primary mt-5">Dimension Inner Height width :</h2>
+        <div id="div2" class="text-primary" style="font-size: larger;"></div><br>
+        <button id="btn2" class="btn btn-outline-primary btn-lg">Dimension of Div</button>
+        <h2 class="text-success mt-5">Dimension Outer Height width :</h2>
+        <div id="div3"   style="font-size: larger;"></div><br>
+        <button id="btn3" class="btn btn-outline-success btn-lg">Dimension of Div</button>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+            var txt = "";
+            txt += "Width of div: " + $("#div1").width()+"</br>";
+            txt += "Height of div: " + $("#div1").height();
+            $("#div1").html(txt);
+            });
+            $("#btn2").click(function(){
+            var txt = "";
+            txt += "Width of div: " + $("#div2").width()+"</br>";
+            txt += "Height of div: " + $("#div2").height()+"</br>";
+            txt += "Inner width of div: " + $("#div2").innerWidth()+"</br>";
+            txt += "Inner height of div: " + $("#div2").innerHeight();
+            $("#div2").html(txt);
+            });
+            $("#btn3").click(function(){
+            var txt = "";
+            txt += "Width of div: " + $("#div3").width()+"</br>";
+            txt += "Height of div: " + $("#div3").height()+"</br>";
+            txt += "Outer width of div: " + $("#div3").outerWidth()+"</br>";
+            txt += "Outer height of div: " + $("#div3").outerHeight();
+            $("#div3").html(txt);
+           });
+        });
+    </script>
+</body>
+</html>

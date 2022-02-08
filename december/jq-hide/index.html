@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url(assets/img/2808.jpg);
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="mt-5 card">
+                <div class="card-header bg-warning text-">
+                    <h4 class="text-secondary">Jquery hide() </h4>
+                </div>
+                <div class="card-body">
+                        <p class="hide"> jab hide ka button click kare ge tu paragraph hide hu juy ga. </p>
+                </div>
+                <div class="card-footer">
+                  <button id="div0" class="btn btn-success form-control">Hide</button>
+                </div>
+            </div>
+            <div class="mt-5 card">
+                <div class="card-header bg-warning text-">
+                    <h4 class="text-secondary">Jquery Show() </h4>
+                </div>
+                <div class="card-body">
+                        <p class="hid" style="display: none;"> jab show ka button click kare ge tu paragraph show hu juy ga. </p>
+                </div>
+                <div class="card-footer">
+                  <button id="div03" class="btn btn-success form-control">Show</button>
+                </div>
+            </div>
+            <div class="mt-5 card">
+                <div class="card-header bg-warning text-">
+                    <h4 class="text-secondary">Jquery hide() & show()</h4>
+                </div>
+                <div class="card-body">
+                    <p class="hidsho"> jab hide ka button click kare ge tu paragraph hide hu juy ga or show ka button click karne me show hu gy ga. </p>
+                </div>
+                <div class="card-footer">
+                  <button id="div01" class="btn btn-success form-control">Hide</button>
+                  <button id="div02" class="btn btn-success form-control mt-2">Show</button>
+                </div>
+            </div>
+            <div class="mt-5 card">                <div class="card-header bg-warning text-">
+                <h4 class="text-secondary">Jquery hide() / show()</h4>
+                </div>
+                <div class="card-body">
+                <p class="hidshow"> jab button click kare ge tu paragraph hide or show hu jy ga. </p></div>
+                <div class="card-footer"><button id="div04" class="btn btn-success form-control">Hide/Show</button></div>
+            </div>
+            <div class="card mt-5">
+                <div class="card-header bg-warning text-">
+                    <h4 class="text-secondary">Jquery fadeIn()</h4>
+                </div>
+                <div class="card-body">
+                <p>jab ap fade wale button par click kare ge to color box show ho ge.</p>
+                </div>
+                <div class="card-footer">
+                <button id="b1" class="btn-block btn btn-success">Fade</button>
+                <div id="Div05" style="margin-top: 10px; display: none; width: 150px; height: 100px; background-color: greenyellow;"></div>
+                <div id="Div06" style="margin-top: 10px; display: none; width: 150px; height: 100px; background-color: yellow"></div>
+                <div id="Div07" style="margin-top: 10px; display: none; width: 150px; height: 100px; background-color: gray"></div>
+            </div>
+          </div>
+          <div class="card mt-5">
+            <div class="card-header bg-warning text-">
+                <h4 class="text-secondary">Jquery fadeOut()</h4>
+            </div>
+            <div class="card-body">
+            <p>jab ap fade wale button par click kare ge to color box hide ho ge.</p>
+            </div>
+            <div class="card-footer">
+            <button id="b2" class="btn-block btn btn-success">Fade</button>
+            <div id="Div08" style="margin-top: 10px; width: 150px; height: 100px; background-color: rgb(156, 233, 41);"></div>
+            <div id="Div09" style="margin-top: 10px; width: 150px; height: 100px; background-color: yellow"></div>
+            <div id="Div10" style="margin-top: 10px; width: 150px; height: 100px; background-color: gray"></div>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <div class="card-header bg-warning text-">
+            <h4 class="text-secondary">Jquery fadeIn() / fadeOut()</h4>
+        </div>
+        <div class="card-body">
+        <p>jab ap fade wale button par click kare ge to color box hide or show kare ga.</p>
+        </div>
+        <div class="card-footer">
+        <button id="b3" class="btn-block btn btn-success">Fade</button>
+        <div id="Div11" style="margin-top: 10px; width: 150px; height: 100px; background-color: rgb(241, 255, 40);"></div>
+        <div id="Div12" style="margin-top: 10px; width: 150px; height: 100px; background-color: yellow"></div>
+        <div id="Div13" style="margin-top: 10px; width: 150px; height: 100px; background-color: gray"></div>
+        </div>
+      </div>
+      <div class="card mt-5">
+        <div class="card-header bg-warning text-">
+            <h4 class="text-secondary">Jquery fade Opacity</h4>
+        </div>
+        <div class="card-body">
+        <p>jab ap fade wale button par click kare ge to color box ki Opacity kam kar de ga.</p>
+        </div>
+        <div class="card-footer">
+        <button id="b4" class="btn-block btn btn-success">Fade</button>
+        <div id="Div14" style="margin-top: 10px; width: 150px; height: 100px; background-color: greenyellow;"></div>
+        <div id="Div15" style="margin-top: 10px; width: 150px; height: 100px; background-color: yellow"></div>
+        <div id="Div16" style="margin-top: 10px; width: 150px; height: 100px; background-color: gray"></div>
+        </div>
+      </div>
+    </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#div0").click(function(){
+                $(".hide").hide();
+            });
+            $("#div03").click(function(){
+                $(".hid").show(1000);
+            });
+            $("#div01").click(function(){
+                $(".hidsho").hide(2000);
+            });
+            $("#div02").click(function(){
+                $(".hidsho").show(2000);
+            });
+            $("#div04").click(function(){
+                $(".hidshow").fadeToggle(1000);
+            });
+             $("#b1").click(function(){
+                $("#Div05").fadeIn();
+                $("#Div06").fadeIn("slow");
+                $("#Div07").fadeIn(3000);
+            });
+            $("#b2").click(function(){
+                $("#Div08").fadeOut();
+                $("#Div09").fadeOut("slow");
+                $("#Div10").fadeOut(3000);
+            });
+            $("#b3").click(function(){
+                $("#Div11").fadeToggle();
+                $("#Div12").fadeToggle("slow");
+                $("#Div13").fadeToggle(3000);1
+            });
+            $("#b4").click(function(){
+                $("#Div14").fadeTo("slow" , 0.15);
+                $("#Div15").fadeTo("slow" , 0.3);
+                $("#Div16").fadeTo("slow" , 0.8);
+            });
+        });
+    </script>
+</body>
+</html>

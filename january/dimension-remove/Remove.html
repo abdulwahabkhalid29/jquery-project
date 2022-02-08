@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgba(238, 130, 238, 0.097);">
+      <div class="container">
+        <h1 style="text-align: center; color: red;">Remove & Empty :- <br>____________________________________________________________________</h1>
+      <h1 class="text-primary mt-5">Remove :</h1>
+        <div id="div1" style="height: 200px;width: 400px;padding: 10px;margin: 3px;border: 1px solid blue;background-color: lightblue;" ></div>
+      <button id="btn1" class="btn btn-outline-primary btn-lg mt-3">Remove</button>
+      <h1 class="text-warning mt-5">Empty :</h1>
+      <div id="div2" style="height: 200px;width: 400px;padding: 10px;margin: 3px;border: 1px solid yellow;background-color: rgb(227, 230, 173); color: yellow;">this is a paragarph number #1 </div>
+      <button id="btn2" class="btn btn-outline-warning btn-lg mt-3">Remove</button>
+      <p class="text-light">__________________________________________________________</p>
+      <h1 class="text-success">Class Remove :</h1>
+      <h4 class="test mt-5 text-success">This is a paragarph 1</h4>
+      <h4 class="demo text-success">This is a paragarph 2</h4>
+      <button id="btn3" class="btn btn-outline-success btn-lg mt-5">Remove</button>
+      </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+            $("#div1").remove();
+        });
+        $("#btn2").click(function(){
+            $("#div2").empty();
+        });
+        $("#btn3").click(function(){
+            $("h4").remove(".test, .demo");
+        });
+      });
+    </script>
+</body>
+</html>
